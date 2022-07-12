@@ -6,8 +6,17 @@ import { useState } from 'react';
 import PlayerHeader from '../../components/PlayerHeader';
 import PlayerAverages from '../../components/utils/PlayerAverages';
 const Players = ({ playerData }) => {
-	const [currentCompare, setCurrentCompare] = useState([]);
-
+	const [currentCompare, setCurrentCompare] = useState([
+		{
+			personId: 6497,
+			points: 4,
+			fieldGoalsAttempted: 8,
+			fieldGoalsAttemptedPer36MP: 10,
+			plusMInus: -17,
+			plusMinusPer36MP: -21,
+			pointsPer36MP: 8.7551,
+		},
+	]);
 	const player = playerData.player;
 	const gamesPlayed = playerData.gamesAttended;
 
@@ -167,6 +176,7 @@ const Players = ({ playerData }) => {
 					<select
 						onChange={(e) => fetchPlayerGames(e.target.value, players)}
 						className='border border-black font-serif dark:bg-neutral-900 md:text-xl'>
+						<option>Please Make a Selection</option>
 						{players.map((player) => {
 							return (
 								<option key={player.name.last} value={player.id}>

@@ -1,6 +1,5 @@
 const PlayerAverages = ({ player, averages }) => {
 	const [pts, fga, pp36m, plusminus, plusminusp36] = averages;
-	console.log(player);
 
 	return (
 		<div className='flex  justify-center border border-white border-opacity-25  bg-blue-700 text-white ring  ring-black ring-opacity-5 md:min-w-[100vw]'>

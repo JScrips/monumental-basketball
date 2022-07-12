@@ -12,7 +12,6 @@ const Stats = () => {
 	const statOfGames = Object.values(boxScores); // array -- index match dateOfGames
 	const showInfo =
 		selectedDate !== '' ? statOfGames[dateOfGames.indexOf(selectedDate)] : [];
-	console.log(showInfo);
 
 	return (
 		<div className=' dark:text-white '>

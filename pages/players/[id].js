@@ -162,11 +162,11 @@ const Players = ({ playerData }) => {
 					]}
 				/>
 
-				<div className='flex justify-center gap-4 pb-10 pt-10'>
+				<div className='flex justify-center gap-6 pb-10 pt-10 font-serif'>
 					<h3 className='md:text-2xl'> Compare {player.name.first} with</h3>
 					<select
 						onChange={(e) => fetchPlayerGames(e.target.value, players)}
-						className='border border-black dark:bg-neutral-900'>
+						className='border border-black font-serif dark:bg-neutral-900 md:text-xl'>
 						{players.map((player) => {
 							return (
 								<option key={player.name.last} value={player.id}>
@@ -177,10 +177,10 @@ const Players = ({ playerData }) => {
 					</select>
 				</div>
 
-				<div className='mb-10 flex justify-center border-b border-black border-opacity-20  dark:border-white dark:border-opacity-20'>
-					<article className='flex  pb-10 text-xs md:text-base lg:gap-40'>
+				<div className='mb-10 flex justify-center border-b border-black border-opacity-20  font-serif dark:border-white dark:border-opacity-20'>
+					<article className='flex  pb-10 text-xs md:text-xl lg:gap-40'>
 						<div className='flex flex-col'>
-							<div className='flex flex-col'>
+							<div className='flex flex-col gap-6'>
 								<div className='flex flex-col'>
 									<span>Average Points:</span>
 									<span> {avgPoints}</span>
@@ -203,7 +203,7 @@ const Players = ({ playerData }) => {
 								</div>
 							</div>
 						</div>
-						<div className='flex flex-col gap-3'>
+						<div className='flex flex-col gap-7'>
 							<h2> Difference Breakdown: </h2>
 							{avgPoints - ccAvgPoints > 0 ? (
 								<span className='text-green-600'>
@@ -256,7 +256,7 @@ const Players = ({ playerData }) => {
 							)}{' '}
 						</div>
 						<div className='flex flex-col'>
-							<div className='flex flex-col'>
+							<div className='flex flex-col gap-6'>
 								<div className='flex flex-col'>
 									<span>Average Points:</span>
 									<span> {ccAvgPoints}</span>
@@ -287,35 +287,39 @@ const Players = ({ playerData }) => {
 				</div>
 
 				<h3 className='pb-10 text-2xl font-bold'> List of Games Played </h3>
-				<div className='flex h-96 flex-col gap-6 overflow-y-scroll border border-black text-sm lg:text-base'>
+				<div className=' mx-auto flex max-h-[800px] w-11/12 flex-col gap-6 overflow-y-scroll border-t border-black text-sm lg:text-xl'>
 					{gamesPlayed.map((game, i) => {
 						return (
-							<div key={game + gamesPlayed.indexOf(game)}>
-								<span className=' text-2xl'>Game {i + 1}</span>
+							<div
+								key={game + gamesPlayed.indexOf(game)}
+								className=' font-serif'>
+								<span className=' font-serif text-2xl underline'>
+									Game {i + 1}
+								</span>
 
-								<div className='flex  border-b border-black border-opacity-30 p-4 pb-4 dark:border-white dark:border-opacity-20 md:justify-evenly '>
-									<div className='flex flex-col'>
-										<span>Points:</span>
+								<div className='mt-8 flex justify-between border-b border-black border-opacity-30 p-4 pb-4 text-xs dark:border-white dark:border-opacity-20 md:justify-evenly md:text-base'>
+									<div className='flex flex-col gap-2'>
+										<span>Points</span>
 										<span> {game.points}</span>
 									</div>
 
-									<div className='flex flex-col'>
-										<span>Points Per 36M:</span>
+									<div className='flex flex-col gap-2'>
+										<span>Pts / 36</span>
 										<span> {game.pointsPer36MP}</span>
 									</div>
 
-									<div className='flex flex-col'>
-										<span>FGA:</span>
+									<div className='flex flex-col gap-2'>
+										<span>FGA</span>
 										<span> {game.fieldGoalsAttempted}</span>
 									</div>
 
-									<div className='flex flex-col'>
-										<span>FGAP36MP:</span>
+									<div className='flex flex-col gap-2'>
+										<span>FGA/36</span>
 										<span> {game.fieldGoalsAttemptedPer36MP}</span>
 									</div>
 
-									<div className='flex flex-col'>
-										<span>Plus Minus:</span>
+									<div className='flex flex-col gap-2'>
+										<span>+ / -</span>
 										<span> {game.plusMinus}</span>
 									</div>
 								</div>

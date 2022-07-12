@@ -18,22 +18,28 @@ const Stats = () => {
 		<div className=' dark:text-white '>
 			<HeroBanner>
 				<div className='flex min-h-full flex-col items-center justify-center'>
-					<h2 className='lg:9xl text-center text-3xl font-semibold md:text-7xl'>
+					<h2 className='text-center text-6xl font-semibold md:text-7xl lg:text-9xl'>
 						{' '}
 						Statistics
 					</h2>
-					<p className='mt-8 w-8/12 text-center text-sm tracking-tight md:text-lg  lg:text-2xl'>
+					<p className='mt-8 w-8/12 text-center font-serif text-sm tracking-tight  md:text-lg lg:text-2xl'>
 						Find your Players stats sorted by game dates.
 					</p>
-					<p className='text-sm'> Click cards for dynamic profiles </p>
+					<p className='font-serif text-sm'>
+						{' '}
+						Click cards for dynamic profiles{' '}
+					</p>
 				</div>
 			</HeroBanner>
 
 			<div className='flex justify-center gap-2 pb-10 pt-10'>
-				<label> Please Select Game Date: </label>
+				<label className='font-serif text-lg md:text-2xl'>
+					{' '}
+					Please Select Game Date:{' '}
+				</label>
 				<select
 					onChange={(e) => setSelectedDate(e.target.value)}
-					className='flex flex-col rounded-lg border border-black  px-2 dark:bg-neutral-900'>
+					className='flex items-center rounded-lg border  border-black font-serif dark:bg-neutral-900 md:px-2 md:text-xl'>
 					{dateOfGames.map((date) => {
 						return (
 							<option key={date} value={date}>
@@ -85,8 +91,10 @@ const Stats = () => {
 											/>
 
 											<span className='text-2xl'> {playerName}</span>
-											<span className='text-base'>ID: {player.personId}</span>
-											<div className='flex flex-wrap items-center gap-8 px-1  pt-14 text-base'>
+											<span className='font-serif text-base'>
+												ID: {player.personId}
+											</span>
+											<div className='flex flex-wrap items-center gap-8 px-1  pt-14 font-serif text-base'>
 												<div className='flex flex-col'>
 													<span className='text-2xl'>
 														{' '}

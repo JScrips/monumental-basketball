@@ -28,18 +28,18 @@ const MobileNav = ({ setShowMenu, useDark, setThemeDark }) => {
 			initial='hidden'
 			animate='visible'
 			exit='hidden'
-			className='flex min-h-screen bg-teal-700 text-xl font-semibold text-white dark:bg-neutral-900'>
+			className='flex min-h-screen bg-red-700 text-xl font-semibold text-white dark:bg-neutral-900'>
 			<ul className='mx-auto flex flex-col items-center justify-around p-10'>
 				<li>
 					{' '}
 					<button
-						className='text-2xl'
+						className='text-2xl text-white dark:text-blue-600'
 						aria-label='Toggle Dark Mode'
 						onClick={() => setThemeDark((prevTheme) => !prevTheme)}>
 						{useDark ? (
 							<BsMoonStarsFill className='text-blue-700' />
 						) : (
-							<FaSun className='text-orange-600' />
+							<FaSun className='' />
 						)}
 					</button>{' '}
 				</li>
@@ -57,13 +57,6 @@ const MobileNav = ({ setShowMenu, useDark, setThemeDark }) => {
 					</Link>
 				</li>
 
-				<li>
-					<Link href='/contact'>
-						<a onClick={() => setShowMenu((prevState) => !prevState)}>
-							Contact
-						</a>
-					</Link>
-				</li>
 				<li>
 					{' '}
 					<button

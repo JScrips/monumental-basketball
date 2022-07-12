@@ -12,9 +12,9 @@ const Header = ({ setThemeDark, useDark }) => {
 	const [showMenu, setShowMenu] = useState(false);
 
 	return (
-		<nav className='sticky top-0 z-10 flex items-center justify-around bg-red-800 p-6 text-white dark:bg-neutral-900 dark:text-white'>
+		<nav className='sticky top-0 z-10 flex items-center justify-around bg-red-800 p-6 font-serif  text-white dark:bg-neutral-900 dark:text-white'>
 			<Link href='/'>
-				<a>
+				<a className='transform-gpu duration-300 hover:scale-125 hover:transform-gpu hover:duration-300'>
 					<div className='flex items-center text-3xl font-semibold'>
 						<Image
 							src='/BGIMGs/wizardsLogo.png'
@@ -48,10 +48,10 @@ const Header = ({ setThemeDark, useDark }) => {
 				</AnimatePresence>
 			</div>
 			<nav className='hidden w-7/12 lg:block'>
-				<ul className='flex w-full items-center justify-around text-lg font-bold'>
+				<ul className='flex w-full items-center justify-around  text-2xl font-bold'>
 					<Link href='/'>
 						<a>
-							<li className='rounded-lg py-2 px-8 hover:cursor-pointer hover:bg-neutral-400'>
+							<li className='transform-gpu rounded-lg py-2 px-8 duration-300 hover:scale-125 hover:transform-gpu hover:cursor-pointer hover:bg-blue-700 hover:duration-300'>
 								Home
 							</li>
 						</a>
@@ -60,20 +60,13 @@ const Header = ({ setThemeDark, useDark }) => {
 					<Link href='/stats'>
 						<a>
 							{' '}
-							<li className='rounded-lg py-2 px-8 hover:cursor-pointer hover:bg-neutral-400'>
+							<li className='transform-gpu rounded-lg py-2 px-8 duration-300 hover:scale-125 hover:transform-gpu hover:cursor-pointer hover:bg-blue-700 hover:duration-300'>
 								Statistics
 							</li>
 						</a>
 					</Link>
 
-					<Link href='/contact'>
-						<a>
-							<li className='rounded-lg py-2 px-8 hover:cursor-pointer hover:bg-neutral-400'>
-								Contact
-							</li>
-						</a>
-					</Link>
-					<li>
+					<li className='transform-gpu duration-300 hover:scale-150 hover:transform-gpu hover:duration-300'>
 						{' '}
 						<button
 							className='text-2xl'

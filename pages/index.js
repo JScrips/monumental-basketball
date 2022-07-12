@@ -37,11 +37,11 @@ export default function Home() {
 
 			<HeroBanner>
 				<div className='flex min-h-full flex-col items-center justify-center'>
-					<h2 className='lg:9xl text-center text-3xl font-semibold md:text-7xl'>
+					<h2 className='lg:9xl text-center font-sans text-3xl font-bold md:text-7xl'>
 						{' '}
 						Wizards Basketball
 					</h2>
-					<p className='mt-8 w-8/12 text-center text-sm tracking-tight md:text-lg  lg:text-2xl'>
+					<p className='mt-8 w-8/12 text-center font-serif text-sm tracking-tight  md:text-lg lg:text-2xl'>
 						Simple Statistics Site. Mobile First Design
 					</p>
 				</div>
